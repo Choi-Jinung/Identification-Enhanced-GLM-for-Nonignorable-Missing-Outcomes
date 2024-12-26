@@ -2,9 +2,6 @@ library(dplyr)
 library(nleqslv)
 library(flexmix)
 
-# Data Integration under Non-ignorable Selection Mechanism
-# Single Outcome Model for the Non-probability Sample with Gaussian Error Term
-
 # Arguments
 ## 1. pop: Full sample. Response variable should be denoted by "y".
 ## 2. prop: predictor variables of the proposal distribution
@@ -12,9 +9,6 @@ library(flexmix)
 ## 4. M: imputation size
 ## 5. phi_curr: initial value of the propensity score model parameters
 ## 6. binary: If true, the response variable is binary and logistic outcome model will be fitted.
-
-# pop=data; prop=prop; response = c("x1", "y"); phi_curr = rep(0, length(c("x1", "y"))+1); M=M; mixture=T
-
 FI <- function(pop, prop, response, M, phi_curr, mixture=F) {
   pop$ID <- 1:nrow(pop)
   res <- pop[pop$R==1, ]; nonres <- pop[pop$R==0, ]; nonres$y <- NULL
@@ -173,7 +167,8 @@ FI <- function(pop, prop, response, M, phi_curr, mixture=F) {
   return(output1)
 }
 
-# FI_result <- FI_out_MNAR_list[[j]]
+# Arguments
+## 1. FI_result: Output list from the "FI" function.
 VE_NMAR <- function(FI_result) {
   best_model_name <- FI_result$best_model_name
   if (best_model_name=="normal") {

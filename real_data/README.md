@@ -1,0 +1,2 @@
+- **ExitPoll:** Contains code for implementing the analysis presented in Section 5.2 of the manuscript, focusing on Exit Poll data.  
+- **SRI:** Contains code for implementing the analysis presented in Section 5.1 of the manuscript, using data from the Statistics Research Institute at Statistics Korea.

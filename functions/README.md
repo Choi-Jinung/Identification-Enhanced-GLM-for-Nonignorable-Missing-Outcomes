@@ -1,0 +1,3 @@
+- **FI_functions.R:** Contains functions for performing fractional imputation and estimating its variance.  
+- **PPMA_functions.R:** Implements functions for continuous proxy pattern-mixture analysis, as proposed by Andridge and Little (2011). This file is sourced from [https://github.com/randridge/PPMA](https://github.com/randridge/PPMA).  
+- **binaryPPMA_functions.R:** Implements functions for binary proxy pattern-mixture analysis, as proposed by Andridge and Little (2020). This file is also sourced from [https://github.com/randridge/PPMA](https://github.com/randridge/PPMA).  

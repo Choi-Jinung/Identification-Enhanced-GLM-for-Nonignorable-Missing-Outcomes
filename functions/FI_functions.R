@@ -21,7 +21,6 @@ FI <- function(pop, prop, response, M, phi_curr, mixture=F) {
       # Fit the respondents' data with a Gaussian regression model 
       normal_fit <- lm(prop_formula, data=res)
       normal_fit <- step(normal_fit)
-      # normal_fit <- step(normal_fit, k=log(nrow(res)))
       best_model <- normal_fit
       best_model_name <- "normal"
       prop <- colnames(best_model$model)[-1]
